@@ -1,0 +1,1360 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+
+WorldInfo {
+  info [
+    "High-Fidelity Cyber-Physical Safety Interlock & SCADA Simulation"
+    "Facility: Industrial Manufacturing Plant & Material Handling Cell"
+    "Supervisor Controller: esd_supervisor_controller"
+    "Subsystems: 3-Phase Induction Drive Motor, Conveyor Belt System, Auxiliary Cooling Cowl, 3-Tier Andon Stack Light"
+    "Standards: OSHA 29 CFR 1910.147 LOTO, IEC 61508 / 61511 Safety Interlocks"
+  ]
+  title "Industrial Manufacturing Plant - SCADA ESD Interlock"
+  basicTimeStep 64
+}
+Viewpoint {
+  orientation -0.5221135377873615 -0.8477498246157098 -0.09336856282067726 5.815001455542962
+  position -3.6620958690798044 -0.5763548552105499 2.300567064070214
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+DirectionalLight {
+  direction -0.55 -0.45 -1
+  intensity 1.4
+  castShadows TRUE
+}
+SpotLight {
+  beamWidth 1.2
+  cutOffAngle 1.5707963267948966
+  intensity 4.5
+  location 0.2 0 3.2
+  castShadows TRUE
+}
+PointLight {
+  intensity 2.2
+  location -1.5 1.5 2.2
+}
+Solid {
+  translation 0 0 -0.025
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.4 0.42 0.44
+        roughness 0.88
+        metalness 0.08
+      }
+      geometry Box {
+        size 12 12 0.05
+      }
+    }
+  ]
+  name "concrete_factory_floor"
+  boundingObject Box {
+    size 12 12 0.05
+  }
+}
+Solid {
+  translation 0 0 0.002
+  children [
+    Pose {
+      translation 0 1.6 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.78 0.05
+            roughness 0.4
+            metalness 0.1
+          }
+          geometry Box {
+            size 2.8 0.1 0.004
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -1.6 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.78 0.05
+            roughness 0.4
+            metalness 0.1
+          }
+          geometry Box {
+            size 2.8 0.1 0.004
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 1.35 0 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.78 0.05
+            roughness 0.4
+            metalness 0.1
+          }
+          geometry Box {
+            size 0.1 3.3 0.004
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -1.35 0 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.78 0.05
+            roughness 0.4
+            metalness 0.1
+          }
+          geometry Box {
+            size 0.1 3.3 0.004
+          }
+        }
+      ]
+    }
+  ]
+  name "safety_zone_stripes"
+}
+Solid {
+  children [
+    Pose {
+      translation -1.8 0 0.5
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.75 0.05
+            roughness 0.3
+            metalness 0.5
+          }
+          geometry Box {
+            size 0.04 3.6 0.04
+          }
+        }
+        Pose {
+          translation 0 0 -0.25
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.95 0.75 0.05
+                roughness 0.3
+                metalness 0.5
+              }
+              geometry Box {
+                size 0.04 3.6 0.04
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 0 -1.5 -0.22
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.15 0.18
+                roughness 0.5
+                metalness 0.8
+              }
+              geometry Box {
+                size 0.06 0.06 0.6
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 0 0 -0.22
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.15 0.18
+                roughness 0.5
+                metalness 0.8
+              }
+              geometry Box {
+                size 0.06 0.06 0.6
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 0 1.5 -0.22
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.15 0.18
+                roughness 0.5
+                metalness 0.8
+              }
+              geometry Box {
+                size 0.06 0.06 0.6
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation -0.2 1.9 0.5
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.75 0.05
+            roughness 0.3
+            metalness 0.5
+          }
+          geometry Box {
+            size 3.2 0.04 0.04
+          }
+        }
+        Pose {
+          translation 0 0 -0.25
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.95 0.75 0.05
+                roughness 0.3
+                metalness 0.5
+              }
+              geometry Box {
+                size 3.2 0.04 0.04
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -1.2 0 -0.22
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.15 0.18
+                roughness 0.5
+                metalness 0.8
+              }
+              geometry Box {
+                size 0.06 0.06 0.6
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 1.2 0 -0.22
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.15 0.18
+                roughness 0.5
+                metalness 0.8
+              }
+              geometry Box {
+                size 0.06 0.06 0.6
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  name "perimeter_safety_fence"
+}
+Solid {
+  children [
+    Pose {
+      translation -0.26 -1.1 0.28
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.3 0.38
+            roughness 0.4
+            metalness 0.7
+          }
+          geometry Box {
+            size 0.05 0.05 0.56
+          }
+        }
+        Pose {
+          translation 0 0 -0.27
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.15 0.18
+                roughness 0.6
+                metalness 0.8
+              }
+              geometry Box {
+                size 0.12 0.12 0.015
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation 0.26 -1.1 0.28
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.3 0.38
+            roughness 0.4
+            metalness 0.7
+          }
+          geometry Box {
+            size 0.05 0.05 0.56
+          }
+        }
+        Pose {
+          translation 0 0 -0.27
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.15 0.18
+                roughness 0.6
+                metalness 0.8
+              }
+              geometry Box {
+                size 0.12 0.12 0.015
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation -0.26 0 0.28
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.3 0.38
+            roughness 0.4
+            metalness 0.7
+          }
+          geometry Box {
+            size 0.05 0.05 0.56
+          }
+        }
+        Pose {
+          translation 0 0 -0.27
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.15 0.18
+                roughness 0.6
+                metalness 0.8
+              }
+              geometry Box {
+                size 0.12 0.12 0.015
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation 0.26 0 0.28
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.3 0.38
+            roughness 0.4
+            metalness 0.7
+          }
+          geometry Box {
+            size 0.05 0.05 0.56
+          }
+        }
+        Pose {
+          translation 0 0 -0.27
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.15 0.18
+                roughness 0.6
+                metalness 0.8
+              }
+              geometry Box {
+                size 0.12 0.12 0.015
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation -0.26 0.9 0.28
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.3 0.38
+            roughness 0.4
+            metalness 0.7
+          }
+          geometry Box {
+            size 0.05 0.05 0.56
+          }
+        }
+        Pose {
+          translation 0 0 -0.27
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.15 0.18
+                roughness 0.6
+                metalness 0.8
+              }
+              geometry Box {
+                size 0.12 0.12 0.015
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation 0.26 0.9 0.28
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.22 0.3 0.38
+            roughness 0.4
+            metalness 0.7
+          }
+          geometry Box {
+            size 0.05 0.05 0.56
+          }
+        }
+        Pose {
+          translation 0 0 -0.27
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.15 0.18
+                roughness 0.6
+                metalness 0.8
+              }
+              geometry Box {
+                size 0.12 0.12 0.015
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation -0.28 -0.05 0.55
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.28 0.36
+            roughness 0.4
+            metalness 0.75
+          }
+          geometry Box {
+            size 0.04 2.2 0.12
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.28 -0.05 0.55
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.28 0.36
+            roughness 0.4
+            metalness 0.75
+          }
+          geometry Box {
+            size 0.04 2.2 0.12
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -0.05 0.58
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.13 0.14
+            roughness 0.85
+            metalness 0.1
+          }
+          geometry Box {
+            size 0.5 2.16 0.03
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -0.27 -0.05 0.64
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.92 0.72 0.05
+            roughness 0.3
+            metalness 0.5
+          }
+          geometry Box {
+            size 0.02 2.16 0.05
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.27 -0.05 0.64
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.92 0.72 0.05
+            roughness 0.3
+            metalness 0.5
+          }
+          geometry Box {
+            size 0.02 2.16 0.05
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -0.7 0.51
+      rotation 0 1 0 1.5708
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.65 0.67 0.7
+            roughness 0.25
+            metalness 0.9
+          }
+          geometry Cylinder {
+            height 0.5
+            radius 0.025
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0.3 0.51
+      rotation 0 1 0 1.5708
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.65 0.67 0.7
+            roughness 0.25
+            metalness 0.9
+          }
+          geometry Cylinder {
+            height 0.5
+            radius 0.025
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -0.5 0.64
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.65 0.48 0.3
+            roughness 0.85
+            metalness 0
+          }
+          geometry Box {
+            size 0.36 0.45 0.04
+          }
+        }
+        Pose {
+          translation 0 0 0.08
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.55 0.58 0.6
+                roughness 0.35
+                metalness 0.85
+              }
+              geometry Box {
+                size 0.24 0.32 0.12
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation 0 0.35 0.65
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.85 0.5 0.15
+            roughness 0.65
+            metalness 0.1
+          }
+          geometry Box {
+            size 0.32 0.35 0.12
+          }
+        }
+        Pose {
+          translation 0 0.176 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.95 0.95 0.95
+                roughness 0.4
+              }
+              geometry Box {
+                size 0.16 0.002 0.06
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  name "industrial_conveyor_system"
+  boundingObject Box {
+    size 0.6 2.4 0.6
+  }
+}
+Robot {
+  translation 0.55 0.95 0.55
+  children [
+    Display {
+      name "scada_display"
+      width 320
+      height 180
+    }
+    Pose {
+      translation 0 0 -0.15
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.22 0.25
+            roughness 0.6
+            metalness 0.8
+          }
+          geometry Box {
+            size 0.45 0.65 0.04
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -0.18 0 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.15 0.35 0.38
+            roughness 0.4
+            metalness 0.65
+          }
+          geometry Box {
+            size 0.16 0.22 0.2
+          }
+        }
+        Pose {
+          translation 0 0 0.105
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.18 0.4 0.44
+                roughness 0.3
+                metalness 0.7
+              }
+              geometry Box {
+                size 0.1 0.14 0.015
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 0.081 0.05 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.8 0.7 0.1
+                roughness 0.1
+                metalness 0.1
+              }
+              geometry Cylinder {
+                height 0.01
+                radius 0.015
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation 0.08 0 0
+      children [
+        Pose {
+          rotation 0 1 0 1.5708
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.18 0.38 0.42
+                roughness 0.4
+                metalness 0.65
+              }
+              geometry Cylinder {
+                height 0.3
+                radius 0.11
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 0 0 0.115
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.14 0.32 0.36
+                roughness 0.4
+                metalness 0.7
+              }
+              geometry Box {
+                size 0.26 0.012 0.025
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 0 -0.08 0.08
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.14 0.32 0.36
+                roughness 0.4
+                metalness 0.7
+              }
+              geometry Box {
+                size 0.26 0.012 0.025
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 0 0.08 0.08
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.14 0.32 0.36
+                roughness 0.4
+                metalness 0.7
+              }
+              geometry Box {
+                size 0.26 0.012 0.025
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 0 -0.115 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.14 0.32 0.36
+                roughness 0.4
+                metalness 0.7
+              }
+              geometry Box {
+                size 0.26 0.025 0.012
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 0 0.115 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.14 0.32 0.36
+                roughness 0.4
+                metalness 0.7
+              }
+              geometry Box {
+                size 0.26 0.025 0.012
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 0.02 0 0.14
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.2 0.24
+                roughness 0.5
+                metalness 0.7
+              }
+              geometry Box {
+                size 0.09 0.09 0.05
+              }
+            }
+            Pose {
+              translation 0 0.048 0
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.85 0.75 0.15
+                    roughness 0.3
+                    metalness 0.8
+                  }
+                  geometry Cylinder {
+                    height 0.02
+                    radius 0.012
+                  }
+                }
+              ]
+            }
+          ]
+        }
+        Pose {
+          translation 0 -0.09 -0.11
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.12 0.26 0.3
+                roughness 0.5
+                metalness 0.7
+              }
+              geometry Box {
+                size 0.22 0.04 0.04
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 0 0.09 -0.11
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.12 0.26 0.3
+                roughness 0.5
+                metalness 0.7
+              }
+              geometry Box {
+                size 0.22 0.04 0.04
+              }
+            }
+          ]
+        }
+      ]
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 1 0 0
+        anchor -0.28 0 0
+      }
+      device [
+        RotationalMotor {
+          name "rotational motor"
+          maxVelocity 20
+        }
+      ]
+      endPoint Solid {
+        translation -0.28 0 0
+        rotation 0 1 0 1.5708
+        children [
+          DEF DRIVE_ROLLER_CORE Shape {
+            appearance DEF DARK_ROTOR_METAL PBRAppearance {
+              baseColor 0.14 0.15 0.18
+              roughness 0.4
+              metalness 0.85
+            }
+            geometry Cylinder {
+              height 0.48
+              radius 0.062
+            }
+          }
+          Pose {
+            children [
+              Shape {
+                appearance DEF ROTOR_SAFETY_YELLOW PBRAppearance {
+                  baseColor 0.98 0.82 0.05
+                  roughness 0.25
+                  metalness 0.15
+                  emissiveColor 0.12 0.1 0.0
+                }
+                geometry Box {
+                  size 0.13 0.012 0.46
+                }
+              }
+            ]
+          }
+          Pose {
+            children [
+              Shape {
+                appearance USE ROTOR_SAFETY_YELLOW
+                geometry Box {
+                  size 0.012 0.13 0.46
+                }
+              }
+            ]
+          }
+          Pose {
+            translation 0 0 0.23
+            children [
+              Shape {
+                appearance USE DARK_ROTOR_METAL
+                geometry Cylinder {
+                  height 0.035
+                  radius 0.1
+                }
+              }
+              Shape {
+                appearance USE DARK_ROTOR_METAL
+                geometry Cylinder {
+                  height 0.02
+                  radius 0.125
+                }
+              }
+              Shape {
+                appearance USE DARK_ROTOR_METAL
+                geometry Box {
+                  size 0.022 0.24 0.038
+                }
+              }
+              Pose {
+                rotation 0 0 1 1.0472
+                children [
+                  Shape {
+                    appearance USE DARK_ROTOR_METAL
+                    geometry Box {
+                      size 0.022 0.24 0.038
+                    }
+                  }
+                ]
+              }
+              Pose {
+                rotation 0 0 1 2.0944
+                children [
+                  Shape {
+                    appearance USE DARK_ROTOR_METAL
+                    geometry Box {
+                      size 0.022 0.24 0.038
+                    }
+                  }
+                ]
+              }
+              Shape {
+                appearance USE ROTOR_SAFETY_YELLOW
+                geometry Box {
+                  size 0.012 0.23 0.042
+                }
+              }
+              Pose {
+                rotation 0 0 1 1.0472
+                children [
+                  Shape {
+                    appearance USE ROTOR_SAFETY_YELLOW
+                    geometry Box {
+                      size 0.012 0.23 0.042
+                    }
+                  }
+                ]
+              }
+              Pose {
+                rotation 0 0 1 2.0944
+                children [
+                  Shape {
+                    appearance USE ROTOR_SAFETY_YELLOW
+                    geometry Box {
+                      size 0.012 0.23 0.042
+                    }
+                  }
+                ]
+              }
+              Shape {
+                appearance USE DARK_ROTOR_METAL
+                geometry Box {
+                  size 0.025 0.284 0.022
+                }
+              }
+              Pose {
+                rotation 0 0 1 1.5708
+                children [
+                  Shape {
+                    appearance USE DARK_ROTOR_METAL
+                    geometry Box {
+                      size 0.025 0.284 0.022
+                    }
+                  }
+                ]
+              }
+              Pose {
+                rotation 0 0 1 0.7854
+                children [
+                  Shape {
+                    appearance USE ROTOR_SAFETY_YELLOW
+                    geometry Box {
+                      size 0.02 0.286 0.024
+                    }
+                  }
+                ]
+              }
+              Pose {
+                rotation 0 0 1 2.3562
+                children [
+                  Shape {
+                    appearance USE ROTOR_SAFETY_YELLOW
+                    geometry Box {
+                      size 0.02 0.286 0.024
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+          Pose {
+            translation 0 0 -0.23
+            children [
+              Shape {
+                appearance USE DARK_ROTOR_METAL
+                geometry Cylinder {
+                  height 0.025
+                  radius 0.095
+                }
+              }
+              Shape {
+                appearance USE ROTOR_SAFETY_YELLOW
+                geometry Box {
+                  size 0.015 0.18 0.03
+                }
+              }
+              Pose {
+                rotation 0 0 1 1.5708
+                children [
+                  Shape {
+                    appearance USE ROTOR_SAFETY_YELLOW
+                    geometry Box {
+                      size 0.015 0.18 0.03
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+        boundingObject USE DRIVE_ROLLER_CORE
+        physics Physics {
+          density -1
+          mass 2
+        }
+      }
+    }
+    Pose {
+      translation 0.26 0 0
+      children [
+        Pose {
+          rotation 0 1 0 1.5708
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.18 0.22
+                roughness 0.4
+                metalness 0.75
+              }
+              geometry Cylinder {
+                height 0.08
+                radius 0.115
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 0.041 0 0
+          rotation 0 1 0 1.5708
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.1 0.1 0.12
+                roughness 0.6
+                metalness 0.8
+              }
+              geometry Cylinder {
+                height 0.004
+                radius 0.105
+              }
+            }
+          ]
+        }
+      ]
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1616.780747649443
+        anchor 0.26 0 0
+      }
+      device [
+        RotationalMotor {
+          name "fan motor"
+          maxVelocity 40
+        }
+      ]
+      endPoint Solid {
+        translation 0.26 0 0
+        rotation -0.6441070459828221 -0.41261262557708317 -0.6441094119244558 3.924253710615231
+        children [
+          DEF FAN_HUB Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.12 0.15
+              roughness 0.3
+              metalness 0.8
+            }
+            geometry Cylinder {
+              height 0.04
+              radius 0.04
+            }
+          }
+          Pose {
+            translation 0 0.065 0
+            rotation 0 0 1 0.35
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0.05 0.68 0.95
+                  roughness 0.35
+                  metalness 0.4
+                }
+                geometry Box {
+                  size 0.012 0.08 0.003
+                }
+              }
+            ]
+          }
+          Pose {
+            translation 0 -0.065 0
+            rotation 0 0 1 0.35
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0.05 0.68 0.95
+                  roughness 0.35
+                  metalness 0.4
+                }
+                geometry Box {
+                  size 0.012 0.08 0.003
+                }
+              }
+            ]
+          }
+          Pose {
+            translation 0.056 0.032 0
+            rotation 0 0 1 1.4
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0.05 0.68 0.95
+                  roughness 0.35
+                  metalness 0.4
+                }
+                geometry Box {
+                  size 0.012 0.08 0.003
+                }
+              }
+            ]
+          }
+          Pose {
+            translation -0.056 -0.032 0
+            rotation 0 0 1 1.4
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0.05 0.68 0.95
+                  roughness 0.35
+                  metalness 0.4
+                }
+                geometry Box {
+                  size 0.012 0.08 0.003
+                }
+              }
+            ]
+          }
+          Pose {
+            translation -0.056 0.032 0
+            rotation 0 0 1 -0.7
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0.05 0.68 0.95
+                  roughness 0.35
+                  metalness 0.4
+                }
+                geometry Box {
+                  size 0.012 0.08 0.003
+                }
+              }
+            ]
+          }
+          Pose {
+            translation 0.056 -0.032 0
+            rotation 0 0 1 -0.7
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0.05 0.68 0.95
+                  roughness 0.35
+                  metalness 0.4
+                }
+                geometry Box {
+                  size 0.012 0.08 0.003
+                }
+              }
+            ]
+          }
+        ]
+        boundingObject USE FAN_HUB
+        physics Physics {
+          density -1
+          mass 0.25
+        }
+        linearVelocity -8.200209109772441e-31 2.502141021667586e-44 -1.0800251323086448e-15
+        angularVelocity 15 -6.933599415583695e-15 2.4959178201691224e-15
+      }
+    }
+    Pose {
+      translation 0.22 0.35 -0.15
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.12 0.14 0.16
+            roughness 0.6
+            metalness 0.8
+          }
+          geometry Cylinder {
+            height 0.02
+            radius 0.06
+          }
+        }
+        Pose {
+          translation 0 0 0.3
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.16 0.18
+                roughness 0.4
+                metalness 0.9
+              }
+              geometry Cylinder {
+                height 0.6
+                radius 0.018
+              }
+            }
+          ]
+        }
+      ]
+    }
+    LED {
+      translation 0.22 0.35 0.5
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.1 0.8 0.2
+            roughness 0.2
+            metalness 0.1
+          }
+          geometry Cylinder {
+            height 0.06
+            radius 0.035
+          }
+        }
+        Pose {
+          translation 0 0 0.035
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.1 0.1 0.1
+                roughness 0.5
+              }
+              geometry Cylinder {
+                height 0.01
+                radius 0.037
+              }
+            }
+          ]
+        }
+      ]
+      name "green_led"
+      color [
+        0 1 0
+      ]
+    }
+    LED {
+      translation 0.22 0.35 0.58
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.65 0.05
+            roughness 0.2
+            metalness 0.1
+          }
+          geometry Cylinder {
+            height 0.06
+            radius 0.035
+          }
+        }
+        Pose {
+          translation 0 0 0.035
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.1 0.1 0.1
+                roughness 0.5
+              }
+              geometry Cylinder {
+                height 0.01
+                radius 0.037
+              }
+            }
+          ]
+        }
+      ]
+      name "amber_led"
+      color [
+        1 0.75 0
+      ]
+    }
+    LED {
+      translation 0.22 0.35 0.66
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.15 0.15
+            roughness 0.2
+            metalness 0.1
+            emissiveColor 1 0 0
+          }
+          geometry Cylinder {
+            height 0.06
+            radius 0.035
+          }
+        }
+        Pose {
+          translation 0 0 0.04
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.1 0.1 0.1
+                roughness 0.5
+                metalness 0.8
+              }
+              geometry Cylinder {
+                height 0.02
+                radius 0.038
+              }
+            }
+          ]
+        }
+      ]
+      name "red_led"
+    }
+  ]
+  name "industrial_scada_interlock_plant"
+  controller "esd_supervisor_controller"
+  supervisor TRUE
+}
